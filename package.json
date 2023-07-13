@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@google-cloud/functions-framework": "^3.3.0",
 		"firebase": "^9.23.0",
 		"firebase-frameworks": "^0.10.5"
 	}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { scaleLength } from "$lib/support";
   
     export let width = "100px";

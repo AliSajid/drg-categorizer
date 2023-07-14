@@ -15,6 +15,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    if: ${{ github.comm}}
     outputs:
       outcome: ${{ steps.outcome.outputs.outcome }}
     steps:
@@ -26,6 +27,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cache: pnpm
       - name: Set pnpm as the package manager
         uses: pnpm/action-setup@v2
         with:
@@ -64,6 +66,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cache: pnpm
       - name: Set pnpm as the package manager
         uses: pnpm/action-setup@v2
         with:

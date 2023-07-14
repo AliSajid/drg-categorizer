@@ -68,5 +68,5 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRG_CATEGORIZER_F1DB1 }}'
-          channelId: {env.channel_id}
+          channelId: ${{ env.channel_id }}
           projectId: drg-categorizer-f1db1

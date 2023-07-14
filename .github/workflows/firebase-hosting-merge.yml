@@ -62,7 +62,7 @@ jobs:
           if [ ${{ github.ref_name }} = "main" ]; then
             echo "channel_id=live" >> $GITHUB_ENV
           else
-            echo "channel_id=${{env.GITHUB_REF_NAME}}" >> $GITHUB_ENV
+            echo "channel_id=${{github.ref_name}}" >> $GITHUB_ENV
           fi
       - name: Output channel id
         run: echo ${{ env.channel_id }} && echo ${{ env.GITHUB_REF_NAME }} && echo ${{ github.ref_name }}

@@ -60,12 +60,12 @@ jobs:
         id: select_channel
         run: |
           if [ env.GITHUB_REF_NAME = "main" ]; then
-            echo channel_id=live >> $GITHUB_ENV
+            echo "channel_id=live" >> $GITHUB_ENV
           else
-            echo channel_id=${{env.GITHUB_REF_NAME}} >> $GITHUB_ENV
+            echo "channel_id=${{env.GITHUB_REF_NAME}}" >> $GITHUB_ENV
           fi
       - name: Output channel id
-        run: echo ${{ env.channel_id }}
+        run: echo ${{ env.channel_id }} && echo ${{ env.GITHUB_REF_NAME }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

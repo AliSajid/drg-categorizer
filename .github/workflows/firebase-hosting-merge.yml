@@ -25,11 +25,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: 18.x
       - name: Set pnpm as the package manager
         uses: pnpm/action-setup@v2
         with:
-          version: '8.4.0'
+          version: 8.4.0
       - name: Install dependencies
         run: pnpm install
       - name: Semantic Release
@@ -49,11 +49,11 @@ jobs:
       - name: Setup NodeJS 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: 18.x
       - name: Set pnpm as the package manager
         uses: pnpm/action-setup@v2
         with:
-          version: '8.4.0'
+          version: 8.4.0
       - name: Install dependencies
         run: pnpm install
       - name: Select deployment channel
@@ -66,7 +66,7 @@ jobs:
           fi
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRG_CATEGORIZER_F1DB1 }}'
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRG_CATEGORIZER_F1DB1 }}
           channelId: ${{ env.channel_id }}
           projectId: drg-categorizer-f1db1

@@ -6,6 +6,8 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
+      - alpha
+      - beta
 env:
   FIREBASE_CLI_EXPERIMENTS: webframeworks
 jobs:

@@ -29,4 +29,5 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DRG_CATEGORIZER_F1DB1 }}
           projectId: drg-categorizer-f1db1
+          channelId: ''
           expires: 7d
